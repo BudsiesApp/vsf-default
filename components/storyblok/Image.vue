@@ -1,5 +1,10 @@
 <template>
-  <sb-img :src="item.image" :width="1200" :lazy="true" />
+  <sb-img
+    :src="item.image.filename"
+    :name="item.image.name ? item.image.name : ''"
+    :height="item.height ? item.height : 0"
+    :width="item.width ? item.width : 0"
+  />
 </template>
 
 <script>
