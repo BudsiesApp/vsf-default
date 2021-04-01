@@ -1,5 +1,5 @@
 <template>
-  <div class="default-layout">
+  <div class="default-layout" :class="{'storyblok-preview-mode': isStoryblokPreviewMode}">
     <overlay v-if="overlayActive" />
     <loader />
     <div id="viewport" class="w-100 relative">
@@ -76,7 +76,10 @@ export default {
       isSidebarOpen: state => state.ui.sidebar,
       isMicrocartOpen: state => state.ui.microcart,
       isWishlistOpen: state => state.ui.wishlist
-    })
+    }),
+    isStoryblokPreviewMode () {
+      return this.$route.query.hasOwnProperty('_storyblok')
+    }
   },
   methods: {
     onOrderConfirmation (payload) {
@@ -129,3 +132,13 @@ export default {
 </script>
 
 <style lang="scss" src="theme/css/main.scss"></style>
+
+<style lang="scss">
+.default-layout {
+  &.storyblok-preview-mode {
+    a {
+      pointer-events: none;
+    }
+  }
+}
+</style>
