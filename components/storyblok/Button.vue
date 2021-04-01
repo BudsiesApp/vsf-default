@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <router-link :id="item.id" :to="url" class="brdr-none px10 py20 bg-cl-mine-shaft :bg-cl-th-secondary weight-400 cl-white fs-medium no-underline pointer align-center">
+  <div class="storyblok-button">
+    <router-link :id="item.id" :to="url" class="_link button-outline brdr-none px10 py20 bg-cl-mine-shaft :bg-cl-th-secondary weight-400 cl-white fs-medium no-underline pointer align-center">
       {{ item.text }}
     </router-link>
   </div>
@@ -19,3 +19,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.storyblok-button ._link {
+  display: inline-block;
+}
+</style>

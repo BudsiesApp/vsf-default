@@ -75,6 +75,9 @@ section {
     align-items: center;
   }
 }
+section.box {
+  height: 500px;
+}
 .usp > div {
     display: flex;
     flex: 1;
