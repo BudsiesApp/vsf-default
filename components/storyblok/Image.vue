@@ -2,8 +2,8 @@
   <sb-img
     :src="item.image.filename"
     :name="item.image.name ? item.image.name : ''"
-    :height="item.height ? item.height : 0"
-    :width="item.width ? item.width : 0"
+    :height="item.height ? +item.height : 0"
+    :width="item.width ? +item.width : 0"
   />
 </template>
 
