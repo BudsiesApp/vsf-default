@@ -45,7 +45,7 @@ export default {
     async loadCategory () {
       let categories = await CategoryService.getCategories({
         filters: {
-          slug: this.item.slug
+          id: this.item.id
         }
       })
 

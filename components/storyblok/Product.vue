@@ -86,9 +86,9 @@ export default {
     async loadData () {
       this.product = await ProductService.getProductByKey({
         options: {
-          slug: this.item.slug
+          id: this.item.id
         },
-        key: 'slug',
+        key: 'id',
         skipCache: true
       })
     }
